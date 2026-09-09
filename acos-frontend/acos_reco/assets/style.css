@@ -1,0 +1,8 @@
+.result-card {border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:12px; background:#fff}
+.badge {display:inline-block; padding:2px 8px; border-radius:9999px; font-size:12px; margin-right:6px}
+.badge-pos {background:#e6f7ec; color:#067647}
+.badge-neg {background:#fdeaea; color:#c30d0d}
+.badge-neu {background:#eef2f7; color:#475569}
+.cat-chip {background:#f1f5f9; color:#0f172a; border-radius:8px; padding:2px 8px; font-size:12px; margin-right:6px}
+.feature {font-weight:600}
+.small {color:#64748b; font-size:12px}

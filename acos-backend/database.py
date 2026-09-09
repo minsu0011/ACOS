@@ -5,13 +5,13 @@ from bert_utils.tokenization import BertTokenizer
 from modeling import BertForQuadABSA, CategorySentiClassification
 from tqdm import tqdm
 
-# --- Configuration ---
+
 # Path to the trained models (should match the output_dir in run.sh)
 STEP1_MODEL_DIR = './output/Extract-Classify-QUAD/rest16_1st/'
 STEP2_MODEL_DIR = './output/Extract-Classify-QUAD/rest16_2nd/'
 DB_FILE = 'products.db'
 
-# --- Dummy product and review data ---
+
 # In a real project, this part should be modified to read data from a DB or files.
 DUMMY_PRODUCTS = [
     {"id": "P001", "name": "Super Soft Cotton T-Shirt", "image_url": "http://example.com/image1.jpg"},
@@ -49,8 +49,8 @@ class ACOS_Processor:
 
     def analyze(self, sentence):
         # TODO: The actual ACOS model analysis logic needs to be implemented here.
-        #       Step 1 -> Extract Aspect-Opinion pairs
-        #       Step 2 -> Classify Category-Sentiment
+
+
         # For now, it returns dummy analysis results.
         print(f"Analyzing: \"{sentence}\"")
         if "soft" in sentence:
@@ -71,7 +71,7 @@ def setup_database():
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
 
-    # --- Create Tables ---
+
     print("Creating tables...")
     # Product information table
     cursor.execute('''
