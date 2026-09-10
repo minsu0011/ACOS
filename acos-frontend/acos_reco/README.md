@@ -12,7 +12,7 @@
   - recommender.py: 필터/스코어링 로직
   - types.py: 공용 타입/상수
 - data/
-  - quads_sample.tsv: 샘플(레스토랑) 일부 라인
+  - quads_sample.tsv: 별도로 준비할 입력 파일
 - assets/
   - style.css: 간단한 카드/배지 스타일
 
@@ -31,7 +31,7 @@ streamlit run streamlit_app.py
 ```
 
 3) 데이터 경로
-- 기본은 `data/quads_sample.tsv` 샘플을 사용합니다.
+- 기본 경로는 `data/quads_sample.tsv`이며 데이터 자체는 포함하지 않습니다.
 - 전체 데이터 사용 시, ACOS 레포의 `data/Restaurant-ACOS/rest16_quad_*.tsv` 또는 `data/Laptop-ACOS/laptop_quad_*.tsv`를 다운로드하여 경로를 지정하세요.
 
 환경변수 또는 앱 사이드바에서 데이터 파일을 선택할 수 있습니다.
