@@ -1,2 +1,2 @@
-Flask
-flask-cors
+Flask>=3.1,<4
+flask-cors>=5,<7

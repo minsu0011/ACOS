@@ -1,4 +1,8 @@
 # Rights notice
 
-기존 source/header와 별도 LICENSE의 권리 고지를 유지합니다. 이 파일은 새로운 라이선스 부여 문서가 아닙니다. 데이터·외부 코드의 재배포 권리는 ATTRIBUTION.md와 data/README.md를 확인하세요.
+기존 연구 source/header와 README의 출처·권리 고지를 유지합니다. 이 파일은 새로운 포괄적 라이선스 부여 문서가 아닙니다.
+
+upstream ACOS와 BERT 파일의 기여, 개별 라이선스, 애플리케이션의 구현 범위는 ATTRIBUTION.md에서 구분합니다. Apache-2.0 header가 있는 파일의 라이선스 본문은 third_party/Apache-2.0.txt에 있습니다.
+
+원 데이터와 사용자 리뷰의 재배포 권리는 소스 코드의 공개 여부와 별개입니다.
 

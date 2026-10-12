@@ -33,6 +33,17 @@ dist/
 *.ipynb
 /data/*
 !/data/README.md
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.jsonl
+*.csv
+!docs/source-index.csv
+.coverage
+htmlcov/
+.streamlit/secrets.toml
 artifacts/
 outputs/
 cache/

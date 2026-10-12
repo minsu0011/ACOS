@@ -1,0 +1,3 @@
+-r acos-backend/requirements-app.txt
+-r acos-frontend/acos_reco/requirements.txt
+waitress>=3,<4

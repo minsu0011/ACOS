@@ -1,22 +1,34 @@
 from __future__ import annotations
 from collections import Counter
+import hashlib
 from typing import List, Dict, Tuple
 
 from .types import ProductAgg
 
 
 def sentence_to_product_id(text: str) -> str:
-    base = text[:40].lower()
-    return f"prod_{abs(hash(base)) % 100000}"
+    """Create a stable review identity when a real product ID is unavailable."""
+    if not isinstance(text, str):
+        raise ValueError("Review text must be a string.")
+    digest = hashlib.sha256(text.encode("utf-8")).hexdigest()
+    return f"review_{digest}"
 
 
 def build_product_index(rows: List[Dict]) -> List[ProductAgg]:
     # group by (product_id, category, feature)
     buckets: Dict[Tuple[str, str, str], List[int]] = {}
     for r in rows:
-        pid = sentence_to_product_id(r["text"])  # demo mapping
+        product_id = r.get("product_id")
+        pid = (
+            str(product_id)
+            if product_id is not None and str(product_id).strip()
+            else sentence_to_product_id(r["text"])
+        )
+        sentiment = r["sentiment"]
+        if type(sentiment) is not int or sentiment not in (0, 1, 2):
+            raise ValueError("Sentiment must be the integer 0, 1, or 2.")
         key = (pid, str(r["category"]), str(r["feature"]))
-        buckets.setdefault(key, []).append(int(r["sentiment"]))
+        buckets.setdefault(key, []).append(sentiment)
 
     out: List[ProductAgg] = []
     for (pid, cat, feat), sentis in buckets.items():

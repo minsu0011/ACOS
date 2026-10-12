@@ -1,2 +1,2 @@
-streamlit==1.38.0
-orjson==3.10.7
+streamlit>=1.51,<2
+requests>=2.32,<3

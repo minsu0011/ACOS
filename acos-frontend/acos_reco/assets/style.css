@@ -1,8 +1,34 @@
-.result-card {border:1px solid #e5e7eb; border-radius:12px; padding:16px; margin-bottom:12px; background:#fff}
-.badge {display:inline-block; padding:2px 8px; border-radius:9999px; font-size:12px; margin-right:6px}
-.badge-pos {background:#e6f7ec; color:#067647}
-.badge-neg {background:#fdeaea; color:#c30d0d}
-.badge-neu {background:#eef2f7; color:#475569}
-.cat-chip {background:#f1f5f9; color:#0f172a; border-radius:8px; padding:2px 8px; font-size:12px; margin-right:6px}
-.feature {font-weight:600}
-.small {color:#64748b; font-size:12px}
+/* Static presentation only; product and review content uses Streamlit widgets. */
+:root { --acos-ink: #17243b; --acos-muted: #66758c; --acos-brand: #4459c7; }
+[data-testid="stAppViewContainer"] { background: #f6f7fb; }
+[data-testid="stHeader"] { background: rgba(246,247,251,.92); }
+.block-container { max-width: 1240px; padding-top: 2rem; padding-bottom: 2rem; }
+[data-testid="stSidebar"] { background: #fff; border-right: 1px solid #e6e9f2; }
+h1, h2, h3, h4 { color: var(--acos-ink); letter-spacing: -.025em; }
+[data-testid="stCaptionContainer"] { color: var(--acos-muted); }
+[data-testid="stVerticalBlockBorderWrapper"] > div { background: #fff; border-radius: 16px; }
+[data-testid="stMetric"] { background: #fff; border: 1px solid #e5e9f3; border-radius: 12px; padding: 14px 18px; }
+[data-testid="stMetricLabel"] { color: var(--acos-muted); font-size: .8rem; }
+[data-testid="stMetricValue"] { color: var(--acos-ink); font-size: 1.7rem; }
+[data-testid="stButton"] button, [data-testid="stDownloadButton"] button { border-radius: 9px; }
+button[kind="primary"], button[kind="primaryFormSubmit"] { background: var(--acos-brand); border-color: var(--acos-brand); }
+[data-testid="stForm"] { background: #fff; border: 1px solid #e1e6f0; border-radius: 16px; padding: 1.4rem; }
+[data-testid="stText"] { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; color: var(--acos-ink); }
+.acos-hero { display: flex; justify-content: space-between; align-items: center; gap: 2rem; padding: 2.4rem 2.8rem;
+  margin-bottom: 1.5rem; border: 1px solid #dfe5f6; border-radius: 24px;
+  background: linear-gradient(120deg,#edf0ff 0%,#f4f6fe 58%,#e9f5f2 100%); }
+.acos-eyebrow { color: #5163a4; letter-spacing: .11em; font-weight: 700; font-size: .67rem; margin-bottom: 1rem; }
+.acos-hero h1 { font-size: clamp(2rem,3.1vw,3rem); line-height: 1.26; margin: 0; padding: 0; color: #1a2b50; font-weight: 750; }
+.acos-hero p { color: #5e6e8b; font-size: .92rem; margin: 1rem 0 0; }
+.acos-mark { display: grid; grid-template-columns: repeat(2,1fr); gap: 9px; transform: rotate(-7deg); margin-right: 1rem; }
+.acos-mark span { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.78); border: 1px solid rgba(111,128,181,.22); border-radius: 15px;
+  font-size: 1.6rem; font-weight: 700; color: #4459a7; box-shadow: 0 5px 20px rgba(43,64,111,.05); }
+.acos-mark span:nth-child(2), .acos-mark span:nth-child(3) { color: #258575; }
+@media (max-width: 700px) {
+  .block-container { padding: 1rem; }
+  .acos-hero { padding: 1.8rem 1.5rem; }
+  .acos-mark { display: none; }
+  .acos-eyebrow { font-size: .58rem; }
+  [data-testid="stMetric"] { padding: 10px; }
+}
