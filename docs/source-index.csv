@@ -35,8 +35,8 @@ acos-frontend/acos_reco/ACOS/Extract-Classify-ACOS/run_step1.py,py,22980
 acos-frontend/acos_reco/ACOS/Extract-Classify-ACOS/run_step2.py,py,15933
 acos-frontend/acos_reco/src/api_client.py,py,4790
 acos-frontend/acos_reco/src/import_data.py,py,8067
-acos-frontend/acos_reco/src/indexer.py,py,1720
-acos-frontend/acos_reco/src/loader.py,py,3898
+acos-frontend/acos_reco/src/indexer.py,py,1690
+acos-frontend/acos_reco/src/loader.py,py,3844
 acos-frontend/acos_reco/src/recommender.py,py,3293
 acos-frontend/acos_reco/src/textnorm.py,py,1082
 acos-frontend/acos_reco/src/types.py,py,1332
